@@ -18,3 +18,20 @@ document.getElementById('button1').addEventListener('click', (event) => {
   element_list.appendChild(new_li);
 
 });
+var Nlinks, links;
+
+
+Nlinks = ['Amazon', 'Netflix', 'Google'];
+links = ['https://www.disney.co.uk', 'https://www.netflix.co.uk', 'https://www.google.co.uk'];
+while (!!links.length) {
+  if(--window.LoopTrap <= 0) throw "Infinite loop.";
+  let element_list = document.getElementById('list');
+  let new_li = document.createElement('li');
+  let new_a = document.createElement('a');
+  new_a.setAttribute("href", links.shift());
+  new_a.innerText = Nlinks.shift();
+
+  new_li.appendChild(new_a);
+
+  element_list.appendChild(new_li);
+}
