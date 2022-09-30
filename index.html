@@ -185,6 +185,21 @@ document.getElementById('button1').addEventListener('click', (event) => {
 
 });
     
+var page;
+
+// Describe this function...
+function start_book() {
+  if(--window.LoopTrap <= 0) throw "Infinite loop.";
+  page = 1;
+  let element_page_num = document.getElementById('page-num');
+  element_page_num.innerText = page;
+  let element_text = document.getElementById('text');
+  element_text.innerText = 'Hello Everyone!!!';
+  let element_image = document.getElementById('image');
+  element_image.setAttribute("src", 'https://i.pinimg.com/236x/52/58/31/52583145dc5976ccab83dc46028d2c67--hello-pics-hello-pictures.jpg');
+}
+
+
 start_book();
 
 
