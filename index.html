@@ -158,7 +158,7 @@ img {
 
   <div id='page-view'>
     <p><b id='text'></b><p>
-    <img id='image' width='350' height="300" src=''/>
+    <img id='image' width='300' height="300" src=''/>
   </div>
   <p>page <span id='page-num'></span> 
   <div>
@@ -166,6 +166,26 @@ img {
     <button id='restart-btn'>restart</button>
   </div>
       </div>
+  
+  <div class="container">
+<div class="row">
+ <div class="col-6">
+<label>Your Name:</label><br>
+<input id="name""></input>
+</div>
+</div
+</div>
+
+<div class="container">
+<div class="row">
+<div class="col-6">
+<label> Comment:</label> <br>
+<input id="comment" placeholder="Please comment"></input>
+<button v-on:click="addItem()" class='primaryContained float-right' type="submit"id="send">Your Comment</button>
+<ul id="display">
+</ul>
+</div>
+  
   <script>
     function getNumberOrString(value) {
   // Convert a string value to a number if possible
