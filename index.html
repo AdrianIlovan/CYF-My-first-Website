@@ -176,14 +176,23 @@ img {
 </div
 </div>
 
-<div class="container">
-<div class="row">
-<div class="col-6">
-<label> Comment:</label> <br>
-<input id="comment" placeholder="Please comment"></input>
-<button v-on:click="addItem()" class='primaryContained float-right' type="submit"id="send">Your Comment</button>
-<ul id="display">
-</ul>
+<div class="feedback">
+ <fieldset>
+<form action>
+<label for="name">Enter your name:</label>
+<input type="text" name="name" id="name" placeholder="Name">
+  <br>                                    
+<label for="email">Email:</label>
+<input type="email" name="email" id="email" placeholder="Email">                  
+  <br>
+<textarea name="feedback" id="feedback" cols="30" rows="10" placeholder="feedback..."></textarea>                                                               
+</form>
+ <button class="btn-shop">Submit</button>                                                                                    
+                         </fieldset>
+                         </div>
+                  
+                  
+
 </div>
   
   <script>
