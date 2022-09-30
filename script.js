@@ -18,38 +18,6 @@ document.getElementById('button1').addEventListener('click', (event) => {
   element_list.appendChild(new_li);
 
 });
-var Nlinks, links;
-
-
-Nlinks = ['Amazon', 'Netflix', 'Google'];
-links = ['https://www.disney.co.uk', 'https://www.netflix.co.uk', 'https://www.google.co.uk'];
-while (!!links.length) {
-  if(--window.LoopTrap <= 0) throw "Infinite loop.";
-  let element_list = document.getElementById('list');
-  let new_li = document.createElement('li');
-  let new_a = document.createElement('a');
-  new_a.setAttribute("href", links.shift());
-  new_a.innerText = Nlinks.shift();
-
-  new_li.appendChild(new_a);
-
-  element_list.appendChild(new_li);
-}
-
-var page;
-
-// Describe this function...
-function start_book() {
-  if(--window.LoopTrap <= 0) throw "Infinite loop.";
-  page = 1;
-  let element_page_num = document.getElementById('page-num');
-  element_page_num.innerText = page;
-  let element_text = document.getElementById('text');
-  element_text.innerText = 'Hello Everyone!!!';
-  let element_image = document.getElementById('image');
-  element_image.setAttribute("src", 'https://i.pinimg.com/236x/52/58/31/52583145dc5976ccab83dc46028d2c67--hello-pics-hello-pictures.jpg');
-}
-
 
 start_book();
 
@@ -98,3 +66,38 @@ document.getElementById('restart-btn').addEventListener('click', (event) => {
   start_book();
 
 });
+
+var Nlinks, links;
+
+
+Nlinks = ['Amazon', 'Netflix', 'Google'];
+links = ['https://www.disney.co.uk', 'https://www.netflix.co.uk', 'https://www.google.co.uk'];
+while (!!links.length) {
+  if(--window.LoopTrap <= 0) throw "Infinite loop.";
+  let element_list = document.getElementById('list');
+  let new_li = document.createElement('li');
+  let new_a = document.createElement('a');
+  new_a.setAttribute("href", links.shift());
+  new_a.innerText = Nlinks.shift();
+
+  new_li.appendChild(new_a);
+
+  element_list.appendChild(new_li);
+}
+
+var page;
+
+// Describe this function...
+function start_book() {
+  if(--window.LoopTrap <= 0) throw "Infinite loop.";
+  page = 1;
+  let element_page_num = document.getElementById('page-num');
+  element_page_num.innerText = page;
+  let element_text = document.getElementById('text');
+  element_text.innerText = 'Hello Everyone!!!';
+  let element_image = document.getElementById('image');
+  element_image.setAttribute("src", 'https://i.pinimg.com/236x/52/58/31/52583145dc5976ccab83dc46028d2c67--hello-pics-hello-pictures.jpg');
+}
+
+
+
